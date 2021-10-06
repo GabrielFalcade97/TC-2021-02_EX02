@@ -16,10 +16,18 @@ describe("Extremos", () => {
   
     test("testing a unordened array", () => {
       expect(extremos.acharExtremos([1, 88, 3, 7, -5])).toMatchObject({
+
         menor: -5,
         imenorValr: 3,
         maior: 88,
         maiorVal: 1,
+        
       });
     });
+  });
+
+  test("testing a null array", () => {
+    expect(() => {
+      extremos.acharExtremos(null);
+    }).toThrow("vetor nao deve ser nulo!");
   });
