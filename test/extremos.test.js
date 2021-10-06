@@ -21,7 +21,7 @@ describe("Extremos", () => {
         imenorValr: 3,
         maior: 88,
         maiorVal: 1,
-        
+
       });
     });
   });
@@ -30,4 +30,10 @@ describe("Extremos", () => {
     expect(() => {
       extremos.acharExtremos(null);
     }).toThrow("vetor nao deve ser nulo!");
+  });
+
+  test("testing a empty array", () => {
+    expect(() => {
+      extremos.acharExtremos([]);
+    }).toThrow("vetor esta vazio!(zero elementos)");
   });
